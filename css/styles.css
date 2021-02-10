@@ -22,7 +22,7 @@ body {
     margin: 0; }
   
   .row-content {
-    padding: 50px 0;
+    padding: 20px 0;
     border-bottom: 1px ridge;
     min-height: 200px; }
   
@@ -58,3 +58,47 @@ body {
   .row-center {
     text-align:center;
   }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    filter: grayscale(.8) brightness(0.85);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .column img:hover {
+    filter: grayscale(0);
+  }
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
+    .column img {
+      filter: grayscale(0) brightness(1);
+    }
+  }
+  
