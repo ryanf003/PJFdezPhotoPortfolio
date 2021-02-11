@@ -59,6 +59,14 @@ body {
     text-align:center;
   }
 
+  #aboutme {
+    margin: 50px 0 0 0;
+  }
+
+  #aboutmeimg {
+    border-radius: 50%;
+  }
+
   .row {
     display: flex;
     flex-wrap: wrap;
